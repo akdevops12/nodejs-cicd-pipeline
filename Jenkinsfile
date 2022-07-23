@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t bharathirajatut/nodeapp:latest .'
+				sh 'docker build -t armand0007/nodeapp:1.0.0 .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push bharathirajatut/nodeapp:latest'
+				sh 'docker push armand0007/nodeapp:1.0.0'
 			}
 		}
 	}
