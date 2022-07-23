@@ -1,3 +1,3 @@
 # nodejs-cicd-pipeline
 
-this project is to deploy a Nodejs app using Jenkins cicd pipeline
+this project is to automate the deployment of a Nodejs application using Jenkins cicd pipeline
