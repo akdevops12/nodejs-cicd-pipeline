@@ -8,10 +8,6 @@ pipeline{
         
 	stages {
 		
-		
-	    stage('gitclone') {
-		    
-                 git 'https://github.com/akdevops12/nodejs-cicd-pipeline.git'
 		stage('Build') {
 
 			steps {
