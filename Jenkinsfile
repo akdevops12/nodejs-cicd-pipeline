@@ -3,15 +3,19 @@ pipeline{
 	agent any
 
 	environment {
-		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+		DOCKERHUB_CREDENTIALS=credentials('Docker-hub')
 	}
-
+        
 	stages {
-
+		
+		
+	    stage('gitclone') {
+		    
+                 git 'https://github.com/akdevops12/nodejs-cicd-pipeline.git'
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t 30marcel/nodeapp:2 .'
+				sh 'docker build -t 30marcel/nodeapp_test:latest .'
 			}
 		}
 
@@ -25,7 +29,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push 30marcel/nodeapp:2'
+				sh 'docker push 30marcel/nodeapp_test:latest'
 			}
 		}
 	}
