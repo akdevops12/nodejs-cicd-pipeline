@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t 30marcel/webapp_test:v2 .'
+				sh 'docker build -t 30marcel/webapp:2 .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push 30marcel/webapp_test:v2'
+				sh 'docker push 30marcel/webapp:2'
 			}
 		}
 	}
