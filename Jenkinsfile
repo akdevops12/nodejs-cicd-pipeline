@@ -11,7 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
-				sh 'docker build -t 30marcel/nodeapp:v2 .'
+				sh 'docker build -t 30marcel/nodeapp:0.0.1 .'
 			}
 		}
 
@@ -25,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push 30marcel/nodeapp:v2'
+				sh 'docker push 30marcel/nodeapp:0.0.1'
 			}
 		}
 	}
