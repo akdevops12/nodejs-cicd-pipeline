@@ -11,3 +11,4 @@ best practice and success
 good job is the best
 success is the goal 
 my gaol
+never give up
