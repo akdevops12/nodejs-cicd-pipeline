@@ -11,6 +11,7 @@ pipeline{
 		stage('Build') {
 
 			steps {
+			  script{ 
 				sh 'docker build -t 30marcel/nodeapp:0.0.1 .'
 			}
 		}
