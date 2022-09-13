@@ -5,14 +5,13 @@ pipeline{
 	environment {
 		DOCKERHUB_CREDENTIALS=credentials('Docker-hub')
 	}
-        
+
 	stages {
-		
+
 		stage('Build') {
 
 			steps {
-			
-				sh 'docker build -t 30marcel/nodeapp:0.0.1 .'
+				sh 'docker build -t 30marcel/nodeapp:1.0.0 .'
 			}
 		}
 
@@ -26,7 +25,7 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push 30marcel/nodeapp:0.0.1'
+				sh 'docker push 30marcel/nodeapp:1.0.0'
 			}
 		}
 	}
